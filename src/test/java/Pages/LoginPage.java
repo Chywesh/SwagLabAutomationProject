@@ -16,6 +16,9 @@ public class LoginPage {
     @FindBy(xpath = "//input[@id='password']")
     WebElement password_xpath;
 
+    @FindBy(xpath = "//input[@id='login-button']")
+    WebElement loginButton_xpath;
+
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -28,6 +31,8 @@ public class LoginPage {
     public void enterPassword(String password) {
         password_xpath.sendKeys(password);
     }
+
+    public void clickLoginButton (){loginButton_xpath.click();}
 
 
 

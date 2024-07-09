@@ -14,4 +14,12 @@ public class BuyIterm extends Base{
         loginPage.enterPassword(ReadFromExcel.password);
     }
 
+    @Test(dependsOnMethods = {"enterPasswordTests", "enterUsernameTests"})
+    public void clickLoginButtonTests() {
+        takeScreenShots.takesSnapShot(driver, "Login Page");
+        loginPage.clickLoginButton();
+    }
+
+
 }
+
