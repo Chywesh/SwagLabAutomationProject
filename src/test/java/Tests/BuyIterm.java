@@ -19,7 +19,12 @@ public class BuyIterm extends Base{
         takeScreenShots.takesSnapShot(driver, "Login Page");
         loginPage.clickLoginButton();
     }
+    @Test(dependsOnMethods = "clickLoginButtonTests")
+    public void verifyLoginSuccessTests() {
+        homePage.verifyUserIsOnHomepage();
+        takeScreenShots.takesSnapShot(driver, "Home Page");
 
 
+}
 }
 

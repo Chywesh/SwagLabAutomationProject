@@ -1,6 +1,7 @@
 package Tests;
 
 
+import Pages.HomePage;
 import Pages.LoginPage;
 import Utils.BrowserFactory;
 import Utils.ReadFromExcel;
@@ -16,6 +17,8 @@ public class Base {
     final WebDriver driver=browserFactory.startBrowser("chrome","https://www.saucedemo.com/");
 
     LoginPage loginPage = PageFactory.initElements(driver,LoginPage.class);
+
+    HomePage homePage = PageFactory.initElements(driver, HomePage.class);
 
     Snapshoots takeScreenShots = new Snapshoots();
 
